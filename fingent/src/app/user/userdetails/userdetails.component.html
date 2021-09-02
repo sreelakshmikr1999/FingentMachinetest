@@ -1,0 +1,69 @@
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  " style="background-color: white;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars" style="color:white;"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+                <li class="nav-item ms-5">
+                    <a class="nav-link active" aria-current="page" routerLink="userlist">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="" style="margin-left: 1250px;">LOGOUT &nbsp;<i
+                            class="fas fa-power-off"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <h4>&nbsp;&nbsp; USER DETAILS</h4>
+    <table class="table table-bordered table-dark ">
+        <thead>
+            <tr>
+                <th (click)="sort('login')">LOGIN&nbsp;<i class="fa fa-sort"></i></th>
+                <th (click)="sort('id')">ID&nbsp;<i class="fa fa-sort"></i></th>
+                <th>NODE_ID</th>
+                <th>AVATHAR_URL</th>
+                <th>GRAVATAR_ID</th>
+                <th>URL</th>
+                <th>HTML_URL</th>
+                <th>FOLLOWERS_URL</th>
+                <th>FOLLOWING_URL</th>
+                <th>GISTS_URL</th>
+                <th>STARRED_URL</th>
+                <th>SUBSCRIPTIONS_URL</th>
+                <th>ORGANIZATIONS_URL</th>
+                <th>REPOS_URL</th>
+                <th>EVENTS_URL</th>
+                <th>RECEIVED_EVENTS_URL</th>
+                <th>TYPE</th>
+                <th>SITE_ADMIN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users  | orderBy: key: reverse |paginate:{itemsPerPage:7,currentPage:p}">
+                <td>{{user.login}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.node_id}}</td>
+                <td>{{user.avatar_url}}</td>
+                <td>{{user.gravatar_id}}</td>
+                <td>{{user.url}}</td>
+                <td>{{user.html_url}}</td>
+                <td>{{user.followers_url}}</td>
+                <td>{{user.following_url}}</td>
+                <td>{{user.gists_url}}</td>
+                <td>{{user.starred_url}}</td>
+                <td>{{user.subscriptions_url}}</td>
+                <td>{{user.organizations_url}}</td>
+                <td>{{user.repos_url}}</td>
+                <td>{{user.events_url}}</td>
+                <td>{{user.received_events_url}}</td>
+                <td>{{user.type}}</td>
+                <td>{{user.site_admin}}</td>
+            </tr>
+        </tbody>
+        <!-- <br> -->
+    </table>
+    <pagination-controls class="pagination" (pageChange)="p=$event"></pagination-controls>

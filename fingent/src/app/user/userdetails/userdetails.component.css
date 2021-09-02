@@ -1,0 +1,17 @@
+*{
+    color: white;
+}
+.table{
+    margin: 1%;
+}
+.pagination{
+    width: 500px;
+    background-color:#212529 ;
+}
+
+pagination.current {
+    padding: 0.1875rem 0.625rem;
+    background: brown;
+    color: #fefefe;
+    cursor: default;
+}

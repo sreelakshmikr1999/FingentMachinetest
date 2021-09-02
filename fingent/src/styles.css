@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #28313a;
+}
+.center {
+    position: absolute;
+    top:25%;
+    width:400px;
+    height: 350px;
+    background-color: #303a45;
+    padding: 2%;
+  
+}
+.form-control{
+    background-color: #384351;
+    border: 0px;
+}
+.error{
+    color: red;
+    font-size: smaller;
+}

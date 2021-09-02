@@ -1,0 +1,21 @@
+.but{
+    width: 100px;
+    border: 0px;
+    background-color: #2199e8;
+}
+.img{
+   
+    opacity: 50%;
+}
+@media(max-width:500px){
+    .center {
+        position: absolute;
+        top:40%;
+        left:20%;
+        width:200px;
+        height: 250px;
+        background-color: #303a45;
+        padding: 2%;
+      
+    }
+}

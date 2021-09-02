@@ -1,0 +1,29 @@
+<body>
+    <img src="/assets/futuristic-smart-city-with-5g-global-network-technology.jpg" width="100%" height="100%" class="img">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"><div class="center">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-5"><h4 style="color: dimgray"><i class="fas fa-globe" ></i>FINGENT</h4>
+                   </div>
+                <div class="col"></div>
+            </div>
+            <hr>
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
+                <input class="form-control mt-3" type="text"  formControlName="name" name="uname" placeholder="FIRST NAME" >
+                <div class="error" *ngIf="(this.registerForm.get('name')?.touched || this.registerForm.get('name')?.dirty)&& this.registerForm.get('name')?.errors">Please Enter Your Name</div>
+                <input class="form-control mt-3" type="text" formControlName="email" name="emailid" placeholder="EMAIL ID">
+                <div class="error" *ngIf="(this.registerForm.get('email')?.touched || this.registerForm.get('email')?.dirty)&&this.registerForm.get('email')?.errors">You have entered a invalid email address</div> 
+                <input class="form-control mt-3" type="text"  name="phno" formControlName="ph" placeholder="PHONE NUMBER">
+                <div class="error" *ngIf="(this.registerForm.get('ph')?.touched || this.registerForm.get('ph')?.dirty)&&this.registerForm.get('ph')?.errors">Enter Digits Only</div>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-6"></div>
+                    <div class="col"> <button type="submit" class="btn btn-secondary mt-3 but" >Login</button></div>
+                </div>
+            </form> <br> 
+        </div></div>
+        <div class="col"></div>
+    </div> 
+</body>
